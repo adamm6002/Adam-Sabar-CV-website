@@ -1,0 +1,145 @@
+/* The same palette is used in Figma. */
+:root {
+    --navy: #2f4156;
+    --teal: #567c8d;
+    --sky: #c8d9e6;
+    --beige: #f5efeb;
+    --white: #ffffff;
+}
+body {
+    margin: 0;
+    background-color: var(--beige);
+    color: var(--navy);
+    font-family: Roboto, Arial, sans-serif;
+    font-size: 18px;
+    line-height: 1.55;
+}
+.page { width: 92%; max-width: 1100px; margin: 20px auto; }
+h1, h2, h3, p { margin-top: 0; }
+h1 { font-size: 46px; line-height: 1.15; margin-bottom: 10px; }
+h2 { font-size: 32px; line-height: 1.2; margin-bottom: 14px; }
+h3 { font-size: 22px; line-height: 1.3; margin-bottom: 6px; }
+p { margin-bottom: 14px; }
+a { color: var(--navy); }
+a:hover { color: var(--teal); }
+.body-copy { text-align: justify; }
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--white);
+    border-radius: 12px;
+    padding: 18px 28px;
+    margin-bottom: 12px;
+}
+.brand { font-size: 25px; font-weight: bold; text-decoration: none; }
+nav { display: flex; flex-wrap: wrap; justify-content: flex-end; }
+nav a { margin-left: 18px; font-size: 15px; text-decoration: none; }
+nav a:hover { text-decoration: underline; }
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 36px;
+    background-color: var(--sky);
+    border-radius: 12px;
+    margin-bottom: 28px;
+}
+.introduction { width: 66%; }
+.introduction h2 { font-size: 27px; margin-bottom: 16px; }
+.hero-image { width: 28%; height: auto; }
+.button {
+    display: inline-block;
+    background-color: var(--navy);
+    color: var(--white);
+    font-weight: bold;
+    text-decoration: none;
+    padding: 11px 24px;
+    border-radius: 7px;
+    margin-top: 8px;
+}
+.button:hover { background-color: var(--teal); color: var(--white); }
+section { margin-bottom: 26px; }
+section > h2 { margin-left: 22px; }
+.panel { background-color: var(--white); padding: 24px 30px; border-radius: 12px; }
+.panel > p:last-child { margin-bottom: 0; }
+.secondary { color: var(--teal); }
+/* Only the first entry has a line: it ends at the second dot. */
+.timeline { margin-left: 14px; padding-top: 6px; }
+.education-item {
+    position: relative;
+    border-left: 2px solid var(--teal);
+    padding-left: 30px;
+    padding-bottom: 26px;
+}
+.education-item::before {
+    content: "";
+    position: absolute;
+    left: -8px;
+    top: 0;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background-color: var(--teal);
+}
+.education-item:last-child { border-left-color: transparent; padding-bottom: 0; }
+.education-item p { margin-bottom: 3px; }
+.skill-list, .language-list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+.skill-list li, .language-list li {
+    width: 19%;
+    background-color: var(--sky);
+    border-radius: 10px;
+    text-align: center;
+    padding-top: 18px;
+    padding-bottom: 16px;
+}
+.skill-list img { width: 58px; height: 58px; margin-bottom: 9px; }
+.skill-list h3, .language-list h3 { font-size: 19px; margin-bottom: 4px; }
+.project { border: 1px solid var(--teal); }
+.project-tags { color: var(--teal); font-size: 16px; }
+.work-list { margin: 8px 0 0; padding-left: 23px; }
+.language-list p { color: var(--navy); font-size: 15px; margin: 0; }
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--navy);
+    color: var(--white);
+    padding: 18px 28px;
+    border-radius: 12px;
+    font-size: 16px;
+}
+footer p { margin: 0; font-weight: bold; }
+footer a { color: var(--white); }
+footer a:hover { color: var(--sky); }
+/* Stack the introduction and wrap the repeated blocks on smaller screens. */
+@media only screen and (max-width: 800px) {
+    header { flex-direction: column; align-items: flex-start; padding: 18px 22px; }
+    nav { justify-content: flex-start; margin-top: 12px; }
+    nav a { margin: 0 18px 6px 0; }
+    .hero { flex-direction: column; align-items: flex-start; padding: 26px; }
+    .introduction { width: 100%; }
+    h1 { font-size: 38px; }
+    .hero-image { width: 190px; align-self: center; margin-top: 22px; }
+    .skill-list li, .language-list li { width: 32%; margin-bottom: 12px; }
+    .panel { padding: 22px; }
+}
+@media only screen and (max-width: 480px) {
+    body { font-size: 16px; }
+    h1 { font-size: 34px; }
+    h2 { font-size: 28px; }
+    h3 { font-size: 20px; }
+    .introduction h2 { font-size: 23px; }
+    .hero { padding: 22px; }
+    .skill-list li, .language-list li { width: 48%; }
+    section > h2 { margin-left: 12px; }
+    footer { flex-direction: column; align-items: flex-start; }
+    footer > a { margin-top: 10px; }
+}
