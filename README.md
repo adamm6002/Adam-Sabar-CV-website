@@ -40,4 +40,4 @@ Finally, I kept the same content order on smaller screens so that adapting the l
 
 [Open the editable Figma design](https://www.figma.com/design/ccftWX1kiYvh3WLDOchuZv/Adam-Sabar-%E2%80%94-CV-web--Copy-?t=U1NPyUZ3SiLt7a9K-1)
 
-[View the public CV website](https://adamm6002.github.io/cv-adam-sabar/)
+[View the public CV website](https://adamm6002.github.io/Adam-Sabar-CV-website/)
